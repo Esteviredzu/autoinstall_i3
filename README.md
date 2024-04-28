@@ -11,4 +11,4 @@ Examples of usage:
 sudo sh install.sh install
 sudo sh install.sh backup
 
-![Uploading изображение.png…]()
+![изображение](https://github.com/Esteviredzu/autoinstall_i3/assets/82750197/74b4cf71-2253-4e15-a8fc-27fe9dda10b5)
