@@ -10,4 +10,5 @@ Examples of usage:
 ```bash
 sudo sh install.sh install
 sudo sh install.sh backup
+
 ![изображение](https://github.com/Esteviredzu/autoinstall_i3/assets/82750197/f581e0e4-b358-454e-9dbe-a5155496b198)
