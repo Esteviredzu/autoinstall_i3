@@ -12,14 +12,14 @@ case "$selected_option" in
         reboot
         ;;
     "Suspend")
-    	/home/esteviredzu/.config/i3/i3lock-setup.sh
+    	$HOME/.config/i3/i3lock-setup.sh
         systemctl suspend
         ;;
     "Logout")
         i3 exit
         ;;
     "Lock")
-        /home/esteviredzu/.config/i3/i3lock-setup.sh
+        $HOME/.config/i3/i3lock-setup.sh
         ;;
     *)
         echo "Invalid option selected"
