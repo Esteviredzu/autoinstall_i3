@@ -31,14 +31,13 @@ install_configs() {
     # Read the file line by line and copy folders
     while IFS= read -r folder; do
         if [ -d "$folder" ]; then
-            echo "Copying $folder to the required directory..."
-            cp -r "$folder" "$HOME/.config/"
+            cp -r "$folder" "$HOME/.config/" && echo "Copying $folder to the required directory..."
         else
             echo "Config for $folder doesn't exist"
         fi
     done < "$1"
 
-    chmod +x "$HOME/.config/i3/i3lock-setup.sh" "$HOME/.config/i3/power.sh" "$HOME/.config/i3/touchpad-setup.sh" "$HOME/.config/polybar/hide_unhide.sh" "$HOME/.config/polybar/.sh"
+    chmod +x "$HOME/.config/i3/i3lock-setup.sh" "$HOME/.config/i3/power.sh" "$HOME/.config/i3/touchpad-setup.sh" "$HOME/.config/polybar/hide_unhide.sh" "$HOME/.config/polybar/launch_polybar.sh"
 }
 
 backup_configs() {
@@ -58,7 +57,7 @@ backup_configs() {
 }
 
 if [ "$1" = "install" ]; then
-    install_packages && echo "Dependency installation complete"
+    #install_packages && echo "Dependency installation complete"
     install_configs "confs"
 elif [ "$1" = "backup" ]; then
     backup_configs "confs"
