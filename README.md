@@ -9,6 +9,8 @@ You can run the script using the command `sudo sh install.sh install` to install
 Examples of usage:
 ```bash
 sudo sh install.sh install
+```
+```bash
 sudo sh install.sh backup
 ```
 ![изображение](https://github.com/Esteviredzu/autoinstall_i3/assets/82750197/74b4cf71-2253-4e15-a8fc-27fe9dda10b5)
