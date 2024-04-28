@@ -39,7 +39,7 @@ install_configs() {
         fi
     done < "$1"
 
-    chmod +x "$HOME/.config/i3/i3lock-setup.sh" "$HOME/.config/i3/power.sh" "$HOME/.config/i3/touchpad-setup.sh" "$HOME/.config/polybar/hide_unhide.sh" "$HOME/.config/polybar/launch_polybar.sh" "$HOME/.config/bugaga/bugaga.sh"
+    chmod +x "$HOME/.config/i3/i3lock-setup.sh" "$HOME/.config/i3/power.sh" "$HOME/.config/i3/touchpad-setup.sh" "$HOME/.config/polybar/hide_unhide.sh" "$HOME/.config/polybar/launch_polybar.sh"
     echo "done"
 }
 
