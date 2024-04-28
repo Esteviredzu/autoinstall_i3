@@ -60,7 +60,7 @@ backup_configs() {
 }
 
 if [ "$1" = "install" ]; then
-    #install_packages && echo "Dependency installation complete"
+    install_packages && echo "Dependency installation complete"
     install_configs "confs"
 elif [ "$1" = "backup" ]; then
     backup_configs "confs"
