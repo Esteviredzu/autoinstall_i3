@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export HOME=$(eval echo ~$SUDO_USER)
+
 # Function to install packages
 install_packages() {
     echo "Installing fonts with icons for Polybar..."
@@ -23,11 +25,11 @@ install_packages() {
 
 # Function to install configurations
 install_configs() {
+    
     if [ ! -f "$1" ]; then
         echo "File doesn't exist!"
         exit 1
     fi
-
     # Read the file line by line and copy folders
     while IFS= read -r folder; do
         if [ -d "$folder" ]; then
@@ -37,7 +39,8 @@ install_configs() {
         fi
     done < "$1"
 
-    chmod +x "$HOME/.config/i3/i3lock-setup.sh" "$HOME/.config/i3/power.sh" "$HOME/.config/i3/touchpad-setup.sh" "$HOME/.config/polybar/hide_unhide.sh" "$HOME/.config/polybar/launch_polybar.sh"
+    chmod +x "$HOME/.config/i3/i3lock-setup.sh" "$HOME/.config/i3/power.sh" "$HOME/.config/i3/touchpad-setup.sh" "$HOME/.config/polybar/hide_unhide.sh" "$HOME/.config/polybar/launch_polybar.sh" "$HOME/.config/bugaga/bugaga.sh"
+    echo "done"
 }
 
 backup_configs() {
