@@ -5,22 +5,22 @@ export HOME=$(eval echo ~$SUDO_USER)
 # Function to install packages
 install_packages() {
     echo "Installing fonts with icons for Polybar..."
-    sudo pacman -S ttf-nerd-fonts-symbols #for icons in polybar
+    sudo pacman -S --noconfirm ttf-nerd-fonts-symbols #for icons in polybar
 
     echo "Installing Fira Code font..."
-    sudo pacman -S ttf-fira-code
+    sudo pacman -S --noconfirm ttf-fira-code
 
     echo "Installing package for touchpad management..."
-    sudo pacman -S xorg-xinput #touchpad
+    sudo pacman -S --noconfirm xorg-xinput #touchpad 
 
     echo "Installing tools for screen capture and locking..."
-    sudo pacman -S scrot imagemagick i3lock #best_i3lock
+    sudo pacman -S --noconfirm scrot imagemagick i3lock #best_i3lock
 
     echo "Installing i3, Polybar, Nitrogen, Rofi, Alacritty, Picom..."
-    sudo pacman -S i3 polybar nitrogen rofi alacritty picom
+    sudo pacman -S --noconfirm i3 polybar nitrogen rofi alacritty picom
 
     echo "Installing additional software..."
-    sudo pacman -S micro xclip lsd bat pcmanfm cmus
+    sudo pacman -S --noconfirm micro xclip lsd bat pcmanfm cmus
 }
 
 # Function to install configurations
