@@ -20,3 +20,8 @@
 element selected {
     text-color: @bg1;
 }
+
+configuration {
+	show-icons: true;
+	icon-theme: "Papirus-Dark";
+}

@@ -46,7 +46,7 @@ bindsym $mod+Shift+q kill
 
 # start program launcher
 #bindsym $mod+d exec --no-startup-id dmenu_recency
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run 
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -106,7 +106,7 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 #bindsym $mod+k focus down
 
 #LOCK 
-bindsym $mod+l exec --no-startup-id $HOME/.config/i3/i3lock-setup.sh
+bindsym $mod+l exec --no-startup-id $HOME/.config/bin/i3lock-setup.sh
 #bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -266,7 +266,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Set shut down, restart and locking features
 #bindsym $mod+0 mode "$mode_system"
 
-bindsym $mod+0 exec --no-startup-id $HOME/.config/i3/power.sh
+bindsym $mod+0 exec --no-startup-id $HOME/.config/bin/power.sh
 
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
@@ -431,7 +431,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch_polybar.sh
 bindsym $mod+m exec $HOME/.config/polybar/hide_unhide.sh 
 
 # Скриптец тачпада на натуральный скроллинг и нажатие касанием
-exec_always --no-startup-id $HOME/.config/i3/touchpad-setup.sh
+exec_always --no-startup-id $HOME/.config/bin/touchpad-setup.sh
 
 #Окна по спирали в i3wm
 exec_always --no-startup-id $HOME/.config/i3/i3-alternating-layout/i3-layout.sh

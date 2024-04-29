@@ -20,7 +20,9 @@ install_packages() {
     sudo pacman -S --noconfirm i3 polybar nitrogen rofi alacritty picom
 
     echo "Installing additional software..."
-    sudo pacman -S --noconfirm micro xclip lsd bat pcmanfm cmus
+    sudo pacman -S --noconfirm micro xclip lsd bat pcmanfm cmus net-tools
+
+    sudo pacman -S papirus-icon-theme
 }
 
 # Function to install configurations
@@ -39,7 +41,7 @@ install_configs() {
         fi
     done < "$1"
 
-    chmod +x "$HOME/.config/i3/i3lock-setup.sh" "$HOME/.config/i3/power.sh" "$HOME/.config/i3/touchpad-setup.sh" "$HOME/.config/polybar/hide_unhide.sh" "$HOME/.config/polybar/launch_polybar.sh"
+    chmod +x "$HOME/.config/bin/i3lock-setup.sh" "$HOME/.config/bin/power.sh" "$HOME/.config/bin/touchpad-setup.sh" "$HOME/.config/polybar/hide_unhide.sh" "$HOME/.config/polybar/launch_polybar.sh"
     echo "done"
 }
 
