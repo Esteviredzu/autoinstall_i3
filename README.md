@@ -15,3 +15,6 @@ sudo sh install.sh backup
 ```
 ![изображение](https://github.com/Esteviredzu/autoinstall_i3/assets/82750197/90a775a7-2f0e-4e9a-adca-0747d4642ebe)
 
+## Additional Functionality
+
+With the `bin/power.sh` script or the key combination `mod+0` in the Rofi menu using the queries `?search` and `y?search`, you can perform searches on Google and YouTube respectively.
