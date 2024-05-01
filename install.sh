@@ -20,9 +20,11 @@ install_packages() {
     sudo pacman -S --noconfirm i3 polybar nitrogen rofi alacritty picom
 
     echo "Installing additional software..."
-    sudo pacman -S --noconfirm micro xclip lsd bat pcmanfm cmus net-tools
+    sudo pacman -S --noconfirm micro xclip lsd bat pcmanfm cmus net-tools playerctl
 
     sudo pacman -S papirus-icon-theme
+
+    sudo pacman -S obsidian
 }
 
 # Function to install configurations
