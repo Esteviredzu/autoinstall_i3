@@ -13,4 +13,5 @@ sudo sh install.sh install
 ```bash
 sudo sh install.sh backup
 ```
-![изображение](https://github.com/Esteviredzu/autoinstall_i3/assets/82750197/74b4cf71-2253-4e15-a8fc-27fe9dda10b5)
+![изображение](https://github.com/Esteviredzu/autoinstall_i3/assets/82750197/90a775a7-2f0e-4e9a-adca-0747d4642ebe)
+
