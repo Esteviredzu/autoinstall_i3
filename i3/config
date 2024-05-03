@@ -429,7 +429,8 @@ mode "$mode_gaps_outer" {
 }
 
 #polybar
-#exec_always --no-startup-id $HOME/.config/polybar/launch_polybar.sh
+#exec --no-startup-id $HOME/.config/polybar/launch_polybar.sh
+exec-always --no-startup-id polybar
 # Скрыть/показать Polybar
 bindsym $mod+m exec $HOME/.config/polybar/hide_unhide.sh 
 
