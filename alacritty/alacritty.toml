@@ -15,4 +15,4 @@ family = "Fira Code"
 style = "Regular"
 
 [colors.primary]
-background = '#181818'
+background = "#14161d"

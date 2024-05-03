@@ -6,7 +6,7 @@ selected_option=$(echo -e "$options" | rofi -dmenu -i -p "Choose an action:")
 
 search_google() {
     query=$1
-    firefox "https://www.google.com/search?q=$(echo $query | sed 's/ /+/g')" # Открытие Firefox с результатами поиска
+    firefox "https://www.google.com/search?q=$(echo $query | sed 's/ /+/g')"
 }
 
 search_youtube() {
