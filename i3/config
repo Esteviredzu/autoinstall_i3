@@ -71,6 +71,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 
 #exec --no-startup-id feh --bg-scale pictures/wallp/girl_dress_jewelry_1168576_1920x1080.jpg
 
+exec --no-startup-id xset s off
 
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
@@ -360,8 +361,8 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
-client.focused #d700ff #778da6 #000000 #ffffff
+# class        border  backgr. text    indic.   child_border
+client.focused #d700ff #778da6 #000000 #778da6
 
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
