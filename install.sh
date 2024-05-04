@@ -25,6 +25,11 @@ install_packages() {
     sudo pacman -S papirus-icon-theme
 
     sudo pacman -S obsidian
+
+    sudo pacman -S firefox lxappearance nano sudo openssh zip unzip tree wget fish cmake make
+    
+    sudo pacman -S keepassxc veracrypt telegram-desktop code flameshot sqlitebrowser python-pip
+     #default utilities
 }
 
 # Function to install configurations
