@@ -1,6 +1,6 @@
 #!/bin/bash
 
-options="Shutdown\nReboot\nSuspend\nLogout\nLock"
+options="VPN\nShutdown\nReboot\nSuspend\nLogout\nLock"
 
 selected_option=$(echo -e "$options" | rofi -dmenu -i -p "Choose an action:")
 
@@ -14,21 +14,36 @@ search_youtube() {
     firefox "https://www.youtube.com/results?search_query=$(echo $query | sed 's/ /+/g')"
 }
 
+vpn() {
+    if pgrep -x "sslocal" > /dev/null
+    then
+        echo "Останавливаю sslocal..."
+        killall sslocal
+        dunstify "vpn disabled"
+    else
+        echo "Запускаю sslocal..."
+        dunstify "vpn enabled"
+        cd ~/git/shadowsocks-vpn && sh start_vpn.sh
+        
+    fi
+}
+
 if [[ $selected_option == "?"* ]]; then
     echo "$selected_option"
     search_google "${selected_option:1}"
-	i3-msg workspace 8:br
     exit 0
 fi
 
 if [[ $selected_option == "y?"* ]]; then
     echo "$selected_option"
     search_youtube "${selected_option:2}"
-    i3-msg workspace 8:br
     exit 0
 fi
 
 case "$selected_option" in
+	"VPN")
+		vpn
+		;;
     "Shutdown")
         shutdown 0
         ;;
