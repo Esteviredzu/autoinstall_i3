@@ -326,7 +326,8 @@ mode "$mode_gaps_outer" {
 #polybar
 #exec --no-startup-id $HOME/.config/polybar/launch_polybar.sh
 exec --no-startup-id polybar
-exec --no-startup-id picom
+#exec --no-startup-id picom
+exec --no-startup-id $HOME/.config/bin/picom --config $HOME/.config/picom/picom-pijulius.conf.back2
 
 # Скрыть/показать Polybar
 bindsym $mod+m exec $HOME/.config/polybar/hide_unhide.sh 
