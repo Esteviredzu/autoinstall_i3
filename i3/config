@@ -73,7 +73,7 @@ bindsym XF86MonBrightnessDown exec xrandr --output eDP-1 --brightness $(echo "$(
 bindsym Print exec --no-startup-id flameshot gui
 
 #LOCK 
-bindsym $mod+l exec --no-startup-id $HOME/.config/bin/i3lock-setup.sh
+bindsym $mod+l exec --no-startup-id $HOME/.config/i3/i3lock-setup.sh
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -257,7 +257,7 @@ set_from_resource $term_color15    color15
 
 # Theme colors
 # class        border  backgr. text    indic.   child_border
-client.focused #d700ff #dbbcb3 #000000 #dbbcb3
+client.focused #d700ff #d9a28e #000000 #d9a28e
 
 client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
 client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948

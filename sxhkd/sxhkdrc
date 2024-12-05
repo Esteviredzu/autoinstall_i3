@@ -1,0 +1,87 @@
+# Переключение на окно слева
+super + Left
+    bspc node -f west
+
+# Переключение на окно справа
+super + Right
+    bspc node -f east
+
+# Переключение на окно выше
+super + Up
+    bspc node -f north
+
+# Переключение на окно ниже
+super + Down
+    bspc node -f south
+
+
+# Открытие терминала
+super + Return
+    alacritty
+    
+# Закрытие окна
+super + shift + q
+    bspc node -c
+alt + c
+    bspc node -c
+
+# Перезагрузка bspwm
+super + shift + r
+    bspc wm -r
+
+# Запуск rofi
+super + d
+    rofi -show run
+
+# Переключение между рабочими столами
+super + {1-9}
+    bspc desktop -f ^{1-9}
+
+# Перемещение окна между рабочими столами
+super + shift + {1-9}
+    bspc node -d ^{1-9}
+
+# Полноэкранный режим окна
+super + f
+    bspc node -t fullscreen
+
+
+super + space
+	bspc node -t "~"{floating,tiled}
+
+
+# Переключение на предыдущий рабочий стол
+super + ctrl + Left
+    bspc desktop -f prev
+
+# Переключение на следующий рабочий стол
+super + ctrl + Right
+    bspc desktop -f next
+
+# Переключение на последний активный рабочий стол
+super + z
+    bspc desktop -f last
+
+# Уменьшить громкость
+super + Page_Down
+    pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send " 󰖀 volume --"
+
+# Увеличить громкость
+super + Page_Up
+    pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send " 󰕾 volume  ++"
+
+# Выключить/включить звук
+super + Delete
+    pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send "snd"
+    
+# VSYAKOJE
+
+super + b
+	firefox
+
+
+super + 0
+	$HOME/.config/bin/power.sh
+
+super + s
+	flameshot gui
