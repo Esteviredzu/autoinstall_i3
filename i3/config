@@ -35,7 +35,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+b exec firefox
 bindsym $mod+t exec telegram-desktop
 bindsym $mod+p exec keepassxc
-bindsym $mod+F6 exec flameshot gui
+bindsym $mod+s exec flameshot gui
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -257,7 +257,7 @@ set_from_resource $term_color15    color15
 
 # Theme colors
 # class        border  backgr. text    indic.   child_border
-client.focused #d700ff #6bb8d9 #000000 #6bb8d9
+client.focused #d700ff #dbbcb3 #000000 #dbbcb3
 
 client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
 client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948

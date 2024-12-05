@@ -55,7 +55,7 @@ case "$selected_option" in
         systemctl suspend
         ;;
     "Logout")
-        i3 exit
+        pkill -KILL -u $USER
         ;;
     "Lock")
         $HOME/.config/bin/i3lock-setup.sh

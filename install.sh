@@ -8,7 +8,7 @@ install_packages() {
     sudo pacman -S --noconfirm ttf-nerd-fonts-symbols #for icons in polybar
 
     echo "Installing Fira Code font..."
-    sudo pacman -S --noconfirm ttf-fira-code
+    sudo pacman -S --noconfirm ttf-dejavu ttf-fira-code
 
     echo "Installing package for touchpad management..."
     sudo pacman -S --noconfirm xorg-xinput #touchpad 
@@ -20,16 +20,22 @@ install_packages() {
     sudo pacman -S --noconfirm i3 polybar nitrogen rofi alacritty picom
 
     echo "Installing additional software..."
-    sudo pacman -S --noconfirm micro xclip lsd bat pcmanfm cmus net-tools playerctl
+    sudo pacman -S --noconfirm micro xclip lsd bat pcmanfm cmus net-tools playerctl shadowsock
 
     sudo pacman -S papirus-icon-theme
 
     sudo pacman -S obsidian
 
-    sudo pacman -S firefox lxappearance nano sudo openssh zip unzip tree wget fish cmake make
+    sudo pacman -S networkmanager firefox lxappearance nano sudo openssh zip unzip tree wget fish cmake make
     
     sudo pacman -S keepassxc veracrypt telegram-desktop code flameshot sqlitebrowser python-pip
      #default utilities
+
+
+   	#sound
+   	sudo pacman -S pipewire  pipewire-pulse wireplumber
+   	systemctl --user enable pipewire pipewire-pulse wireplumber
+   	systemctl --user start pipewire pipewire-pulse wireplumber
 }
 
 # Function to install configurations
